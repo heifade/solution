@@ -1,0 +1,15 @@
+tplink 通过 telnet 刷机
+
+原理：通过telnet的 sys update 命令，到ftp服务器上获取升级文件进行升级
+
+1、在电脑上搭ftp服务器，端口号为21，将升级包放入ftp根目录下面，设备用户名密码
+2、用windows的telnet(telnet不是内部命令时，到添加删除程序的windows程序里安装)登录路由器
+    命令：telnet 192.168.1.1
+    输入用户名密码
+3、开启root
+    命令：enable
+4、升级
+    命令：sys update
+    address: ftp服务器地址
+    用户密码: ftp服务器用户密码
+    升级文件: 在ftp里放的升级文件名称
